@@ -1,0 +1,53 @@
+.header
+    position: relative
+    height: 5rem
+    padding-top: 7rem
+    margin-bottom: 5rem
+    @include respond(tab-port)
+        position: fixed
+        top: 0
+        right: -200vw
+        z-index: 5
+        height: 100vh
+        width: 100vw
+        padding-right: 5rem
+        background: $color-blue
+        transition: .4s all ease
+        backface-visibility: hidden
+
+.header-active
+    right: 0
+
+.navigation
+    height: 100%
+    @include respond(tab-port)
+        height: 80vh
+        padding-left: 5rem
+        justify-content: center !important
+    &__item
+        &:not(:last-child)
+            margin-right: 6.5rem
+        @include respond(tab-land)
+            &:not(:last-child)
+                margin-right: 4rem
+    &__list
+        display: inline-block
+        @include respond(tab-port)
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+    &__link
+        &:link, &:visited
+            font-family: 'Montseratt Bold'
+            display: inline-block
+            color: $color-white
+            text-decoration: none
+            text-transform: uppercase
+            background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%)
+            background-size: 220%
+            transition: .4s all
+            &:hover, &:active
+                background-position: 100%
+                color: $color-blue
+            @include respond(tab-port)
+                font-size: 3rem

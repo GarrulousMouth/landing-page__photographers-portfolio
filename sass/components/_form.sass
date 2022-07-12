@@ -1,0 +1,41 @@
+.form
+    width: 90%
+    padding-left: 3rem
+    padding-top: 8rem
+    &__box-form
+        width: 100%
+        height: 100%
+    &__input-box
+        display: flex
+        align-items: center
+        justify-content: space-between
+        overflow: hidden
+        padding-right: 2rem
+        height: 5rem
+        margin-bottom: 2rem
+        background: $color-gray
+        border-radius: 3rem
+        color: $color-white
+        font-size: 2rem
+        width: 80%
+    &__input
+        display: none
+        color: $color-white
+        width: 80%
+        font-family: 'Montserrat Regular'
+        background: $color-gray
+        border: none
+        font-size: 2rem
+        text-align: right
+        outline: none
+        &::placeholder
+            font-family: 'Montserrat Light'
+            font-size: 1.8rem
+            color: $color-white
+    &__input-title
+        position: relative
+        padding-left: 2rem
+        font-family: 'Montserrat Light'
+        text-transform: uppercase
+        &_right
+            text-align: right

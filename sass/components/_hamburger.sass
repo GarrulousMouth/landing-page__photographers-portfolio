@@ -1,0 +1,43 @@
+.hamburger
+    z-index: 20
+    display: none
+    position: fixed
+    top: 8rem
+    right: 5rem
+    width: 4rem
+    height: 4rem
+    @include respond(tab-port)
+        display: block
+    &__line
+        position: relative
+        display: inline-block
+        height: .5rem
+        width: 100%
+        background-color: $color-white
+        margin-top: 1rem
+        transition: .4s all
+        &::after, &::before
+            display: inline-block
+            position: absolute
+            left: 0
+            width: 100%
+            height: .5rem
+            background-color: $color-white
+            transition: .4s all
+        &::after
+            content: ''
+            top: 1.5rem
+        &::before
+            content: ''
+            top: -1.5rem
+
+.hamburger-active
+    .hamburger__line
+        margin-bottom: -2px
+        background: transparent
+        &::after
+            top: 0
+            transform: rotate(135deg)
+        &::before
+            top: 0
+            transform: rotate(-135deg)

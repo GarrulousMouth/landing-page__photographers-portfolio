@@ -1,0 +1,21 @@
+.box-photo
+    position: relative
+    width: 100%
+    &__side-front
+        transition: .5s all ease-out
+        backface-visibility: hidden
+    &__side-back
+        transition: .5s all ease-out
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        transform: rotateY(-180deg)
+        opacity: 0
+        backface-visibility: hidden
+    &:hover &__side-front
+        transform: rotateY(-180deg)
+    &:hover &__side-back
+        transform: rotateY(0deg)
+        opacity: 1
+
