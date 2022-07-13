@@ -13,6 +13,12 @@
         top: 0
         left: 0
         font-size: 4.5rem
+        &:hover
+            cursor: pointer
+    &__link
+        &, &:link, &:active
+            text-decoration: none
+            color: $color-white
     &_footer
         opacity: 0
     @include respond(tab-port)
