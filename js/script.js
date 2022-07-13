@@ -41,3 +41,17 @@ for (let icon of icons) {
     icon.style.animationDelay = time + 's'
     time += 0.2
 }
+
+let smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+        smoothLink.addEventListener('click', function (e) {
+            document.querySelector('.hamburger').classList.remove('hamburger-active')
+            document.querySelector('.header').classList.remove('header-active')
+            e.preventDefault();
+            let id = smoothLink.getAttribute('href');
+            document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            })
+        })
+    };
